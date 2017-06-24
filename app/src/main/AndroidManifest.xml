@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"></activity>
     </application>
 
 </manifest>
