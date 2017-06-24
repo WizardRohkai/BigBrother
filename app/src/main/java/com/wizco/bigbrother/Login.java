@@ -9,8 +9,8 @@ import android.widget.EditText;
 public class Login extends AppCompatActivity {
 
     Button btnLogin;
-    String sEmail;
-    EditText eEmail;
+    String sEmail,sPass;
+    EditText eEmail,ePass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,8 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 eEmail = (EditText) findViewById(R.id.editText);
                 sEmail = eEmail.getText().toString();
+                ePass = (EditText) findViewById(R.id.editText2);
+                sPass = ePass.getText().toString();
 
             }
         };
