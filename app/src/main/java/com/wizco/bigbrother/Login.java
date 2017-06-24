@@ -26,6 +26,6 @@ public class Login extends AppCompatActivity {
                 sPass = ePass.getText().toString();
 
             }
-        };
+        });
     }
 }
