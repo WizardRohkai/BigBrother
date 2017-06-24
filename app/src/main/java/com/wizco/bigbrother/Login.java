@@ -1,10 +1,14 @@
 package com.wizco.bigbrother;
 
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import static com.wizco.bigbrother.Registration.getPref;
 
 public class Login extends AppCompatActivity {
 
@@ -24,6 +28,15 @@ public class Login extends AppCompatActivity {
                 sEmail = eEmail.getText().toString();
                 ePass = (EditText) findViewById(R.id.editText2);
                 sPass = ePass.getText().toString();
+
+                if (sEmail == getPref("Email", getApplicationContext()) && sPass == getPref("Pass", getApplicationContext()) ) {
+                    startActivity(new Intent(Login.this, Home.class));
+                }else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                    builder.setMessage("Wrong email or password.");
+                    AlertDialog alert=builder.create();
+                    alert.show();
+                }
 
             }
         });
