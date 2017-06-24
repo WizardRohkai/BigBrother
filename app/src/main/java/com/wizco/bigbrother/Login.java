@@ -24,6 +24,6 @@ public class Login extends AppCompatActivity {
                 sEmail = eEmail.getText().toString();
 
             }
-        };
+        });
     }
 }
