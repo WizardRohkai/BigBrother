@@ -42,7 +42,7 @@ public class Registration extends AppCompatActivity {
          builder.setMessage(getPref("Name", getApplicationContext()));
          AlertDialog alert=builder.create();
          alert.show();  */
-         startActivity(new Intent(Registration.this, Home.class));
+         startActivity(new Intent(Registration.this, MainActivity.class));
     }
     public static void putPref(String key, String value, Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
