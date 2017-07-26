@@ -20,7 +20,11 @@
         <activity android:name=".Home" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"></activity>
+            android:label="@string/title_activity_main" />
+        <activity android:name=".Search" />
+        <activity android:name=".Karpost" />
+        <activity android:name=".MensPost" />
+        <activity android:name=".Profile"></activity>
     </application>
 
 </manifest>
