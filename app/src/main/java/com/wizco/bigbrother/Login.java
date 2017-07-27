@@ -22,11 +22,6 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLogin = (Button) findViewById(R.id.Login);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(getPref("Name", getApplicationContext()));
-        AlertDialog alert=builder.create();
-        alert.show();
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
