@@ -15,13 +15,11 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
 
     FloatingActionButton btnHomeToPost;
-    private TextView mTextMessage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
       btnHomeToPost = (FloatingActionButton) findViewById(R.id.btnHomeToPost);
