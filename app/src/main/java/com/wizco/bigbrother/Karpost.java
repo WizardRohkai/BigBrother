@@ -12,7 +12,7 @@ import static com.wizco.bigbrother.Registration.putPref;
 
 public class Karpost extends AppCompatActivity {
 
-    Button btnPost1;
+    Button btnPost1,btnMens;
     EditText edtType , edtModel , edtColour , edtExtra , edtRegNum , edtCaseNum1 , edtCaseNum2;
 
     @Override
@@ -47,6 +47,14 @@ public class Karpost extends AppCompatActivity {
 
 
                 startActivity(new Intent(Karpost.this, Home.class));
+
+            }
+        });
+        btnMens = (Button) findViewById(R.id.button2);
+        btnMens.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Karpost.this, MensPost.class));
 
             }
         });

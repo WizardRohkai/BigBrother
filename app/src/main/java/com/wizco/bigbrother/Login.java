@@ -33,29 +33,17 @@ public class Login extends AppCompatActivity {
                 sCPass = getPref("Pass", getApplicationContext());
 
 
-<<<<<<< HEAD
-                    if ((sEmail.compareToIgnoreCase(sCEmail) != 0) || (sPass.compareTo(sCPass) != 0)) {
+                if ((sEmail.compareToIgnoreCase(sCEmail) != 0) || (sPass.compareTo(sCPass) != 0)) {
 
-                        AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                        builder.setMessage("Wrong email or password." + sCEmail+sEmail+sCPass+sPass);
-                        AlertDialog alert=builder.create();
-                        alert.show();
-                    }else{
-                        startActivity(new Intent(Login.this, Home.class));
-                    }
-                }
-=======
-//                if ((sEmail.compareToIgnoreCase(sCEmail) != 0) || (sPass.compareTo(sCPass) != 0)) {
-//
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-//                    builder.setMessage("Wrong email or password." + sCEmail+sEmail+sCPass+sPass);
-//                    AlertDialog alert=builder.create();
-//                    alert.show();
-//                }else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                    builder.setMessage("Wrong email or password." + sCEmail+sEmail+sCPass+sPass);
+                    AlertDialog alert=builder.create();
+                    alert.show();
+                }else{
                     startActivity(new Intent(Login.this, Home.class));
-//                }
+                }
             }
->>>>>>> d6bccdefe3239577baf90fddd483231972c9c4b7
+
         });
         btnReg = (Button) findViewById(R.id.btnLogToReg);
         btnReg.setOnClickListener(new View.OnClickListener() {

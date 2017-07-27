@@ -25,6 +25,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent" />
+
             <EditText
                 android:id="@+id/edtLast"
                 android:layout_width="122dp"
@@ -73,32 +83,32 @@
                 android:layout_width="130dp"
                 android:layout_height="36dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="-30dp"
                 android:ems="10"
                 android:hint="Case number 2"
                 android:inputType="textPersonName"
                 android:textSize="12sp"
-                app:layout_constraintHorizontal_bias="0.46"
-                app:layout_constraintLeft_toRightOf="@+id/edtCaseNum1"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtCaseNum1" />
+                app:layout_constraintTop_toBottomOf="@+id/edtCaseNum1"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="@+id/edtCaseNum1"
+                app:layout_constraintHorizontal_bias="0.47" />
 
             <EditText
                 android:id="@+id/edtCaseNum1"
                 android:layout_width="129dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="35dp"
                 android:layout_marginStart="35dp"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="12dp"
                 android:ems="10"
                 android:hint="Case number"
                 android:inputType="textPersonName"
                 android:textSize="12sp"
-                app:layout_constraintLeft_toLeftOf="@+id/textView17"
-                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -121,12 +131,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:text="Post"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtLast" />
 
             <EditText
@@ -139,6 +147,7 @@
                 android:ems="10"
                 android:hint="Registration Number"
                 android:inputType="textPersonName"
+                android:textSize="14sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -224,6 +233,7 @@
                 android:ems="10"
                 android:hint="Dents,scratches,etc..."
                 android:inputType="textPersonName"
+                android:textSize="14sp"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -259,6 +269,7 @@
                 android:ems="10"
                 android:hint="Model"
                 android:inputType="textPersonName"
+                android:textSize="14sp"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -298,6 +309,7 @@
                 android:ems="10"
                 android:hint="Type"
                 android:inputType="textPersonName"
+                android:textSize="14sp"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -314,6 +326,7 @@
                 android:ems="10"
                 android:hint="Colour"
                 android:inputType="textPersonName"
+                android:textSize="14sp"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
