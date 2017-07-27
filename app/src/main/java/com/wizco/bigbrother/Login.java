@@ -13,6 +13,7 @@ import static com.wizco.bigbrother.Registration.getPref;
 public class Login extends AppCompatActivity {
 
     Button btnLogin;
+    Button btnReg;
     String sEmail,sPass;
     EditText eEmail,ePass;
 
@@ -22,12 +23,13 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         btnLogin = (Button) findViewById(R.id.Login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                 eEmail = (EditText) findViewById(R.id.editText);
                 sEmail = eEmail.getText().toString();
                 ePass = (EditText) findViewById(R.id.editText2);
                 sPass = ePass.getText().toString();
+
 
                 if (sEmail == getPref("Email", getApplicationContext()) && sPass == getPref("Pass", getApplicationContext()) ) {
                     startActivity(new Intent(Login.this, Home.class));
@@ -38,6 +40,13 @@ public class Login extends AppCompatActivity {
                     alert.show();
                 }
 
+            }
+        });
+        btnReg = (Button) findViewById(R.id.btnLogToReg);
+        btnReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, Registration.class));
             }
         });
     }
