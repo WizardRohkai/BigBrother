@@ -14,7 +14,7 @@ public class Login extends AppCompatActivity {
 
     Button btnLogin;
     Button btnReg;
-    String sEmail,sPass;
+    String sEmail,sPass,sCEmail,sCPass;
     EditText eEmail,ePass;
 
     @Override
@@ -22,29 +22,26 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLogin = (Button) findViewById(R.id.Login);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a687ae16127ceb3e24ba94407a9429fe71083c9a
         btnLogin.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 eEmail = (EditText) findViewById(R.id.editText);
                 sEmail = eEmail.getText().toString();
                 ePass = (EditText) findViewById(R.id.editText2);
                 sPass = ePass.getText().toString();
+                sCEmail = getPref("Email", getApplicationContext());
+                sCPass = getPref("Pass", getApplicationContext());
 
 
-                if (sEmail == getPref("Email", getApplicationContext()) && sPass == getPref("Pass", getApplicationContext()) ) {
+//                if ((sEmail.compareToIgnoreCase(sCEmail) != 0) || (sPass.compareTo(sCPass) != 0)) {
+//
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+//                    builder.setMessage("Wrong email or password." + sCEmail+sEmail+sCPass+sPass);
+//                    AlertDialog alert=builder.create();
+//                    alert.show();
+//                }else{
                     startActivity(new Intent(Login.this, Home.class));
-                }else{
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                    builder.setMessage("Wrong email or password.");
-                    AlertDialog alert=builder.create();
-                    alert.show();
-                }
-
+//                }
             }
         });
         btnReg = (Button) findViewById(R.id.btnLogToReg);

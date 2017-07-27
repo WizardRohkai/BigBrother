@@ -8,17 +8,17 @@
 
 
     <ScrollView
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintVertical_bias="1.0">
 
         <android.support.constraint.ConstraintLayout
@@ -43,27 +43,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="32dp"
                 android:text="6.Last seen at"
                 app:layout_constraintLeft_toLeftOf="parent"
-                tools:layout_editor_absoluteY="758dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="134dp"
                 android:layout_height="wrap_content"
-                tools:layout_editor_absoluteY="715dp"
                 android:layout_marginRight="35dp"
-                app:layout_constraintRight_toRightOf="parent" />
+                android:layout_marginTop="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtCasNum2" />
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="64dp"
                 android:text="5.Involved in"
                 app:layout_constraintLeft_toLeftOf="parent"
-                tools:layout_editor_absoluteY="710dp"
-                android:layout_marginStart="8dp" />
+                app:layout_constraintTop_toBottomOf="@+id/edtCaseNum1" />
 
             <EditText
                 android:id="@+id/edtCasNum2"
@@ -73,6 +76,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="Case number 2"
                 android:inputType="textPersonName"
@@ -80,35 +84,36 @@
                 app:layout_constraintHorizontal_bias="0.46"
                 app:layout_constraintLeft_toRightOf="@+id/edtCaseNum1"
                 app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="659dp" />
+                app:layout_constraintTop_toBottomOf="@+id/edtCaseNum1" />
 
             <EditText
                 android:id="@+id/edtCaseNum1"
                 android:layout_width="129dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
                 android:layout_marginTop="13dp"
                 android:ems="10"
                 android:hint="Case number"
                 android:inputType="textPersonName"
                 android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="@+id/textView17"
-                app:layout_constraintTop_toBottomOf="@+id/textView17"
-                android:layout_marginStart="35dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
                 android:text="4.SAPS Case no.'s"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="629dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                app:layout_constraintTop_toBottomOf="@+id/checkBox14" />
 
             <Button
                 android:id="@+id/btnPost"
@@ -118,10 +123,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
                 android:text="Post"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="848dp" />
+                app:layout_constraintTop_toBottomOf="@+id/edtLast" />
 
             <EditText
                 android:id="@+id/edtRegNum"
@@ -140,11 +146,11 @@
                 android:id="@+id/cbxReg"
                 android:layout_width="48dp"
                 android:layout_height="26dp"
+                android:layout_marginEnd="58dp"
                 android:layout_marginRight="58dp"
                 android:text="Y"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginEnd="58dp" />
+                app:layout_constraintRight_toRightOf="parent" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -200,12 +206,12 @@
                 android:id="@+id/checkBox14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="8dp"
                 android:text="Community"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox13"
-                android:layout_marginEnd="16dp" />
+                app:layout_constraintTop_toBottomOf="@+id/checkBox13" />
 
             <EditText
                 android:id="@+id/edtExtra"
@@ -263,11 +269,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="Registration confirmed:"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtRegNum"
-                android:layout_marginStart="8dp" />
+                app:layout_constraintTop_toBottomOf="@+id/edtRegNum" />
 
             <TextView
                 android:id="@+id/textView2"
