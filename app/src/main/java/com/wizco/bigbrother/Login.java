@@ -14,7 +14,7 @@ public class Login extends AppCompatActivity {
 
     Button btnLogin;
     Button btnReg;
-    String sEmail,sPass;
+    String sEmail,sPass,sCEmail,sCPass;
     EditText eEmail,ePass;
 
     @Override
@@ -22,8 +22,6 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLogin = (Button) findViewById(R.id.Login);
-
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -31,18 +29,20 @@ public class Login extends AppCompatActivity {
                 sEmail = eEmail.getText().toString();
                 ePass = (EditText) findViewById(R.id.editText2);
                 sPass = ePass.getText().toString();
+                sCEmail = getPref("Email", getApplicationContext());
+                sCPass = getPref("Pass", getApplicationContext());
 
 
-                if (sEmail == getPref("Email", getApplicationContext()) && sPass == getPref("Pass", getApplicationContext()) ) {
-                    startActivity(new Intent(Login.this, Home.class));
-                }else{
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                    builder.setMessage("Wrong email or password.");
-                    AlertDialog alert=builder.create();
-                    alert.show();
+                    if ((sEmail.compareToIgnoreCase(sCEmail) != 0) || (sPass.compareTo(sCPass) != 0)) {
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                        builder.setMessage("Wrong email or password." + sCEmail+sEmail+sCPass+sPass);
+                        AlertDialog alert=builder.create();
+                        alert.show();
+                    }else{
+                        startActivity(new Intent(Login.this, Home.class));
+                    }
                 }
-
-            }
         });
         btnReg = (Button) findViewById(R.id.btnLogToReg);
         btnReg.setOnClickListener(new View.OnClickListener() {
